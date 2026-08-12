@@ -46,3 +46,6 @@ unity3d/
 mise/
 uv/
 nvm/
+
+# ===== Bases de credenciales =====
+libaccounts-glib/
