@@ -52,3 +52,9 @@ libaccounts-glib/
 
 # Backups de migraciones omarchy
 *omarchy-upgrade-to-quattro*
+
+# Perfiles de navegador (credenciales)
+zen/
+
+# Perfiles de navegador (credenciales)
+zen/
