@@ -5,14 +5,6 @@ if [ -z "$b" ]; then
     echo "<span foreground='#ffffff'>Sin batería</span>"
     exit
 fi
-if [ "$s" = "Charging" ] || [ "$s" = "Full" ]; then
-    if [ "$s" = "Full" ]; then
-        echo "<span foreground='#82FB9C'>⚡ 100% · Llena</span>"
-    else
-        echo "<span foreground='#82FB9C'>⚡ $b% · Cargando</span>"
-    fi
-    exit
-fi
 if [ "$b" -ge 80 ]; then
     icon=
 elif [ "$b" -ge 60 ]; then
@@ -23,6 +15,14 @@ elif [ "$b" -ge 20 ]; then
     icon=
 else
     icon=
+fi
+if [ "$s" = "Charging" ] || [ "$s" = "Full" ]; then
+    if [ "$s" = "Full" ]; then
+        echo "<span foreground='#82FB9C'>$icon ⚡ 100% · Llena</span>"
+    else
+        echo "<span foreground='#82FB9C'>$icon ⚡ $b% · Cargando</span>"
+    fi
+    exit
 fi
 if [ "$b" -ge 50 ]; then
     echo "<span foreground='#ffffff'>$icon $b%</span>"

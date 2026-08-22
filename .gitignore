@@ -49,3 +49,6 @@ nvm/
 
 # ===== Bases de credenciales =====
 libaccounts-glib/
+
+# Backups de migraciones omarchy
+*omarchy-upgrade-to-quattro*
